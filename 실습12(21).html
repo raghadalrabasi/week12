@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제21</title>
+</head>
+<body>
+    <input type="button" id="redButton" value="red" size="2"/>
+    <input type="button" id="blueButton" value="blue" size="2"/>
+
+    <script type="text/javascript">
+        document.getElementById("blueButton").onclick = function() {
+            document.body.style.backgroundColor = "blue";
+        }
+
+        var redButton = document.getElementById("redButton");
+        redButton.addEventListener('click' , function(){
+            document.body.style.backgroundColor = "red";
+        })
+    </script>
+</body>
+</html>

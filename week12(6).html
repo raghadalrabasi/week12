@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 11-6</title>
+</head>
+<body>
+    <div id="outerbox" style="background: blue; width: 550px; height: 300px;" />
+
+    <div id="innerbox" style="background: yellow; width: 450px; height: 200px; position: absolute; left: 50px; top: 50px;">
+    
+        <img id="img1" src="http://webclass.me/html5_3e/ch11/image1.png" width="100px" style="position: absolute; left: 50px; top: 25px; visibility: visible;">
+
+        <img id="img2" src="http://webclass.me/html5_3e/ch11/image2.png" width="100px" style="position: absolute; left: 175px; top: 25px; visibility: visible;">
+
+        <img id="img3" src="http://webclass.me/html5_3e/ch11/image3.png" width="100px" style="position: absolute; left: 300px; top: 25px; visibility: visible;">
+    </div> 
+
+    </div>
+
+    <script type="text/javascript">
+        function changeColor(id, color) {
+            document.getElementById(id).style.background = color;
+        }
+    </script>
+
+    Outer Box:
+        <button onclick="changeColor('outerbox', 'red');"> Red </button>
+        <button onclick="changeColor('outerbox', 'green');"> Green </button>
+        <button onclick="changeColor('outerbox', 'blue');"> Blue </button>
+        <br/>
+
+    Inner Box:
+        <button onclick="changeColor('innerbox', 'red');"> Red </button>
+        <button onclick="changeColor('innerbox', 'green');"> Green </button>
+        <button onclick="changeColor('innerbox', 'blue');"> Blue </button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제25</title>
+</head>
+<body>
+    <button id="myButton" >Click Me!</button>
+    <div id="output"></div>
+
+    <script>
+        var button = document.getElementById('myButton');
+        var output = document.getElementById('output');
+        
+        function logEvent(event) {
+            var eventName = event.type;
+            output.innerHTML += eventName + "<br/>" ;       
+        }
+        
+        var events = ['click', 'mouseover', 'mouseout','mousedown', 'mouseup', 'focus', 'blur','mousemove','select','change','keypress']
+        
+        // Loop through the events array using a for loop
+        for (var i = 0; i < events.length; i++) {
+            var eventName = events[i];
+            button.addEventListener(eventName, logEvent);
+        }
+    </script>
+</html>

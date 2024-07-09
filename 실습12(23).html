@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제23</title>
+</head>
+<body>
+    <form>
+        <input id="op1" type="text" size="2"/>+
+        <input id="op2" type="text" size="2"/>
+        <input type="button" value="=" onclick="add();"/>
+        <input id="result1" type="text" size="2"/> 
+        <br/><br/>
+
+        <input id="op3" type="text" size="2"/>-
+        <input id="op4" type="text" size="2"/>
+        <input type="button" value="=" onclick="sub();"/>
+        <input id="result2" type="text" size="2"/>
+        <br/><br/>
+
+        <input id="op5" type="text" size="2"/>×
+        <input id="op6" type="text" size="2"/>
+        <input type="button" value="=" onclick="mul();"/>
+        <input id="result3" type="text" size="2"/>
+        <br/><br/>
+        
+        <input id="op7" type="text" size="2"/>÷ 
+        <input id="op8" type="text" size="2"/>
+        <input type="button" value="=" onclick="div();"/>
+        <input id="result4" type="text" size="2"/>
+    </form>
+    
+    <script type="text/javascript">
+        function add() {
+            var a = document.getElementById("op1").value;
+            var b = document.getElementById("op2").value;
+            document.getElementById("result1").value = parseInt(a) + parseInt(b);
+        }
+
+        function sub() {
+            var a = document.getElementById("op3").value;
+            var b = document.getElementById("op4").value;
+            document.getElementById("result2").value = parseInt(a) - parseInt(b);
+        }
+
+        function mul() {
+            var a = document.getElementById("op5").value;
+            var b = document.getElementById("op6").value;
+            document.getElementById("result3").value = parseInt(a) * parseInt(b);
+        }
+
+        function div() {
+            var a = document.getElementById("op7").value;
+            var b = document.getElementById("op8").value;
+            document.getElementById("result4").value = parseInt(a) / parseInt(b);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 11-2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var stopped = false;
+
+        function start() {
+            dom = document.getElementById("sec");
+            dom.value = parseInt(dom.value)+1;
+            if (!stopped) setTimeout(start,1000);
+        }
+    </script>
+
+    <h2> Stopwatch</h2>
+    <form action="">
+        <input type="button" value="Start" onclick="stopped=false; setTimeout(start,1000);"/>
+        <input type="button" value="Start" onclick="stopped=true"/>
+        <input type="reset"/> <br/><br/>
+
+        <input type="text" id="sec" size="2" value="0"/> seconds
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <style>
+        .image {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 200px;height: 200px;opacity: 0;
+            transition: opacity 0.5s ease-in-out;}
+    </style>
+</head>
+<body>
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image1.png" alt="Image 1">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image2.png" alt="Image 2">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image3.png" alt="Image 3">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image1.png" alt="Image 4">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image2.png" alt="Image 5">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image3.png" alt="Image 6">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image1.png" alt="Image 7">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image2.png" alt="Image 8">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image3.png" alt="Image 9">
+    <img class="image" src="http://webclass.me/html5_3e/ch11/image1.png" alt="Image 10">
+
+    <script>
+        var images = document.querySelectorAll(".image");
+
+        function showImages() {
+            images.forEach((image, index) => {
+                setTimeout(() => {
+                    image.style.opacity = 1; 
+                }, 200 * index);
+            });
+        }
+        window.onload = showImages;
+    </script>
+</body>
+</html>
